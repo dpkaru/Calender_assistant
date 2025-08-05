@@ -10,10 +10,10 @@ from assistant_output import AssistantOutput
 import os
 
 load_dotenv()
-
+GOOGLE_API_KEY = os.environ["GOOGLE_AI_API_KEY"]
 app = Flask(__name__)
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.2)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.2, google_api_key="GOOGLE_AI_API_KEY")
 parser = PydanticOutputParser(pydantic_object=AssistantOutput)
 
 prompt = ChatPromptTemplate.from_messages([
