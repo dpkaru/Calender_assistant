@@ -1,4 +1,7 @@
+Flask
 langchain
-langchain-community
-langchain-dotenv
-pydantic
+langchain-google-genai
+python-dotenv
+google-api-python-client
+google-auth
+google-auth-oauthlib
